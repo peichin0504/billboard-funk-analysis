@@ -1,0 +1,52 @@
+\begin{table}
+\caption{Difference-in-Differences: Effect of \textit{Blurred Lines} Verdict on Song Danceability}
+\label{tab:did}
+\begin{center}
+\begin{tabular}{ll}
+\hline
+                & Danceability  \\
+\hline
+Intercept       & 0.540***      \\
+                & (0.011)       \\
+C(year)[T.2011] & -0.001        \\
+                & (0.013)       \\
+C(year)[T.2012] & 0.013         \\
+                & (0.014)       \\
+C(year)[T.2013] & 0.016         \\
+                & (0.014)       \\
+C(year)[T.2014] & 0.021         \\
+                & (0.015)       \\
+C(year)[T.2015] & -0.020*       \\
+                & (0.011)       \\
+C(year)[T.2016] & -0.010        \\
+                & (0.011)       \\
+C(year)[T.2017] & 0.007         \\
+                & (0.012)       \\
+C(year)[T.2018] & 0.035***      \\
+                & (0.012)       \\
+C(year)[T.2019] & 0.033***      \\
+                & (0.012)       \\
+C(year)[T.2020] & 0.022         \\
+                & (0.016)       \\
+is\_funk        & 0.163***      \\
+                & (0.009)       \\
+post            & 0.066***      \\
+                & (0.012)       \\
+is\_funk:post   & -0.023        \\
+                & (0.014)       \\
+\hline
+R-squared       & 0.357         \\
+Adj. R-squared  & 0.349         \\
+N               & 1016          \\
+\hline
+\end{tabular}
+\end{center}
+\bigskip
+\footnotesize
+Standard errors in parentheses (HC3 heteroskedasticity-robust). \newline
+* p$<$.1, ** p$<$.05, *** p$<$.01 \newline
+\textit{Note:} The key coefficient of interest is \texttt{is\_funk:post}, which captures the
+differential change in danceability for funk-like songs after the March 2015
+\textit{Blurred Lines} verdict. Funk songs are identified via K-Means clustering
+on pre-2015 data. Baseline year is 2010.
+\end{table}
